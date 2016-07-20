@@ -54,17 +54,20 @@
 	var bol = false
 	for (var i = 0; i < ons.length; i++) {
 		ons[i].index = i;
-		ons[i].onclick = function () {
-			if (!bol) {
-				this.style.transform = "rotate(180deg)";
-				bol = true;
+		ons[i].addEventListener('touchstart',function (e) {
+			if (e.touches.length==1) {
+				if (!bol) {
+					this.style.transform = "rotate(180deg)";
+					bol = true;
 				p[this.index].style.display = "block"
-			}else{
-				this.style.transform = "rotate(0deg)";
-				bol = false;
-				p[this.index].style.display = "none"
+				}else{
+					this.style.transform = "rotate(0deg)";
+					bol = false;
+					p[this.index].style.display = "none"
+				}
 			}
-		}
+			
+		})
 	}
 </script>
 </html>

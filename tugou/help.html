@@ -55,14 +55,14 @@
 	for (var i = 0; i < ons.length; i++) {
 		ons[i].index = i;
 		ons[i].addEventListener('touchstart',function (e) {
-			if (!bol) {
+			if (!this.bol) {
 				this.style.transform = "rotate(180deg)";
-				bol = true;
-				p[this.index].style.display = "block"
+				this.bol = true;
+				p[this.index].style.display = "block";
 			}else{
 				this.style.transform = "rotate(0deg)";
-				bol = false;
-				p[this.index].style.display = "none"
+				this.bol = false;
+				p[this.index].style.display = "none";
 			}	
 		})
 	}

@@ -45,23 +45,23 @@ body,html{
 }
 .header p{
 	height: 100%;
-	font-size: 16px;
+	font-size: 18px;
 	padding-left: 165px;
 	line-height: 78px;
 	color: white;
 }
 .header .bj{
-	width: 24px;
 	position: absolute;
 	right:15.5px;
 	top: 35.5px;
-	font-size: 9px;
+	font-size: 15px;
 	color: white;
 }
 .content{
 	width: 100%;	
 	padding-top: 3px;
 	padding-bottom: 60px;
+	background: rgb(235,234,228);
 }
 .content .list_1{
 	width: 347px;
@@ -103,7 +103,6 @@ body,html{
 	bottom: 0;
 }
 .content .list_1 .into .money{
-	width: 55px;
 	height: 16px;
 	border: 1px solid black;
 	position: absolute;
@@ -119,7 +118,7 @@ body,html{
 	border-right: 1px solid #ccc;
 }
 .content .list_1 .into .money div:nth-child(2){
-	width: 17px;
+	width: 18px;
 	border-right: 1px solid #ccc;
 }
 .content .list_1 .into .money div:nth-child(3){

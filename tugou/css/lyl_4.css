@@ -43,10 +43,11 @@ body,html{
 	height: 50%;
 }
 .header p{
+	width: 100%;
 	height: 100%;
-	font-size: 22px;
-	padding-left: 165px;
-	line-height: 70px;
+	font-size: 20px;
+	text-align: center;
+	line-height: 75px;
 	color: white;
 }
 .content{
@@ -78,7 +79,7 @@ body,html{
 	top: 9px;
 	right:15px;
 }
-.footer{
+.footer a{
 	width: 92%;
 	height: 30px;
 	line-height: 30px;

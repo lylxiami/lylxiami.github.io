@@ -61,6 +61,7 @@ body,html{
 	width: 100%;	
 	padding-top: 3px;
 	padding-bottom: 60px;
+	background: rgb(235,234,228);
 }
 .content .list_1{
 	width: 93%;
@@ -171,69 +172,4 @@ body,html{
 	text-align: center;
 	line-height: 48px;
 	font-size: 15px;
-}
-@media screen and (min-width: 768px){
-	.content .list_1 .chose{
-	width: 20px;
-	height: 20px;
-	margin:14% 2.4%;
-	border-radius: 100%;
-	border: 1px solid rgb(98,98,98);
-}
-.content .list_1 .chose div{
-	width: 16px;
-	height: 16px;
-	border-radius: 100%;
-	margin: 2px auto;
-	background: rgba(106,180,57,0);
-}
-.footer{
-	width: 100%;
-	height: 60px;
-	position: fixed;
-	bottom: 0;
-	right: 0;
-	background: rgba(72,56,43,.8);
-}
-.footer .choses{
-	width: 22px;
-	height: 22px;
-	margin:18px 5px 14px 15px;
-	border-radius: 100%;
-	border: 2px solid white;
-}
-.footer .choses div{
-	width: 18px;
-	height: 18px;
-	border-radius: 100%;
-	margin: 2px auto;
-	background: rgba(106,180,57,0);
-}
-.footer p{
-	padding-top: 21px;
-	color: white;
-	font-size: 15px;
-	margin-right: 26px;
-}
-.footer .hj div:first-child{
-	padding-top: 10px;
-	margin-bottom: 7px;
-	color: white;
-	font-size: 18px;
-}
-.footer .hj div:last-child{
-	color: white;
-	font-size: 13px;
-}
-.footer .js{
-	width: 100px;
-	height: 100%;
-	position: absolute;
-	right: 0;
-	background: rgb(255,94,57);
-	color: white;
-	text-align: center;
-	line-height: 48px;
-	font-size: 18px;
-}
 }

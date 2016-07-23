@@ -140,7 +140,7 @@
 				j += inn[i].innerHTML*Number(cost[i].innerHTML)
 			}
 			sum = j;
-			index = 4;
+			index = chose.length;
 			js.innerHTML = "去结算("+index+")";
 			$_money();
 
@@ -153,6 +153,7 @@
 			}
 			sum=0;
 			index=0;
+			j=0;
 			js.innerHTML = "去结算(0)";
 			$_money();
 		}
@@ -224,6 +225,13 @@
 			lost[i].addEventListener('touchstart',function(){
 				arr.push(this.parentNode);
 				cont.removeChild(arr[0]);
+				if (chose[this.index].bol) {
+					index--;
+					sum -= inn[this.index].innerHTML*Number(cost[this.index].innerHTML);
+					if (sum<0) {sum=0}
+					js.innerHTML = "去结算("+index+")";
+				}
+				$_money();
 				arr = [];
 			})
 		}

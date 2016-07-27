@@ -94,17 +94,17 @@ body,html{
 .content .list_1 .into{
 	width: 50%;
 	padding-top: 15px;
-	position: relative;
 }
 .content .list_1 .into p:nth-child(1){
 	font-size: 15px;
 	margin-bottom: 8px;
 }
-.content .list_1 .into p:nth-child(3){
+.content .cost{
 	font-size: 15px;
 	color: red;
 	position: absolute;
-	bottom: -90%;
+	bottom: 10%;
+	left: 43%;
 }
 .content .list_1 .money{
 	height: 16px;

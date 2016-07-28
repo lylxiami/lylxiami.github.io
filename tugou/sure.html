@@ -21,11 +21,8 @@
 			</div>
 			<div class="con">
 				<ul class="thing clear">
-					<div class="num">共3件</div>
+					<div class="num"></div>
 					<div class="go1"><a href="###"><img src="img/q2.png" alt=""></a></div>
-					<li class="fl"><div><img src="img/q3.png" alt=""></div><p>精选延庆生态芦笋300g</p><p>￥21.80</p></li>
-					<li class="fl"><div><img src="img/q4.png" alt=""></div><p>精选山东迷你小土豆500g</p><p>￥5.00</p></li>
-					<li class="fl"><div><img src="img/q5.png" alt=""></div><p>精选本地卷心菜600g</p><p>￥6.90</p></li>
 				</ul>
 				<div class="pei">
 					<div class="pei_1">支付配送</div>
@@ -46,7 +43,7 @@
 				<div class="go3"><a href="###"><img src="img/q2.png" alt=""></a></div>
 			</div>
 			<div class="mingx clear">
-				<p class="fl">商品金额</p><p id="money1" class="fl">￥16.80</p>
+				<p class="fl">商品金额</p><p id="money1" class="fl"></p>
 				<div class="go3"><a href="###"><img src="img/q2.png" alt=""></a></div>
 			</div>
 			<div class="mingx clear">
@@ -55,12 +52,31 @@
 			</div>
 		</div>
 		<div class="footer clear">
-			<div class="fl l">合计：￥16.8</div>
+			<div class="fl l"></div>
 			<div class="fl r">立即下单</div>
 		</div>
 	</div>
 </body>
+<script type="text/javascript" src="js/shuju2.js"></script>
 <script type="text/javascript">
-	
+
+	var thing = document.querySelector('.thing');
+	for (var i = 0; i < arr.length; i++) {
+		var li = document.createElement('li');
+		li.innerHTML = '<div><img src="'+arr[i].src+'" alt=""></div><p>'+arr[i].name+'</p><p>￥'+arr[i].pay+'</p>';
+		li.className = "fl";
+		thing.appendChild(li);
+	}
+	var num = document.querySelector('.num');
+	num.innerHTML = '共'+arr.length+'件';
+	var money1 = document.querySelector('#money1');
+	// var li = thing.children;
+	var sum = 0;
+	for (var i = 0; i < arr.length; i++) {
+		sum +=parseInt(arr[i].pay);
+	}
+	money1.innerHTML = '￥'+sum.toFixed(2);
+	var l = document.querySelector('.l');
+	l.innerHTML = '合计：￥'+sum.toFixed(2);
 </script>
 </html>

@@ -14,66 +14,7 @@
 			<div class="bj">编辑</div>
 		</div>
 		<div class="content">
-			<div class="list_1 clear">
-				<div class="chose fl"><div></div></div>
-				<div class="fl pic"><img src="img/g1.png" alt=""></div>
-				<div class="fl into">
-					<p>科尔沁牛腩切块500g</p>
-					<p>脂肪少，适合炖汤</p>	
-				</div>
-				<p class="cost"><em>￥</em><span>21.80</span</p>
-				<div class="money clear">
-					<div class="fl rem">-</div>
-					<div class="fl inn">1</div>
-					<div class="fl add">+</div>
-				</div>
-				<div class="lost">删<br>除</div>
-			</div>
-			<div class="list_1 clear">
-				<div class="chose fl"><div></div></div>
-				<div class="fl pic"><img src="img/g2.png" alt=""></div>
-				<div class="fl into">
-					<p>精选有机胡萝卜300g</p>
-					<p>胡萝卜富含维生素</p>	
-				</div>
-				<p class="cost"><em>￥</em><span>8.60</span></p>
-				<div class="money clear">
-					<div class="fl rem">-</div>
-					<div class="fl inn">1</div>
-					<div class="fl add">+</div>
-				</div>
-				<div class="lost">删<br>除</div>
-			</div>
-			<div class="list_1 clear">
-				<div class="chose fl"><div></div></div>
-				<div class="fl pic"><img src="img/g3.png" alt=""></div>
-				<div class="fl into">
-					<p>精选本地豆角300g</p>
-					<p>富含维生素和矿物质等</p>
-				</div>
-				<p class="cost"><em>￥</em><span>10.20</span</p>
-				<div class="money clear">
-					<div class="fl rem">-</div>
-					<div class="fl inn">1</div>
-					<div class="fl add">+</div>
-				</div>
-				<div class="lost">删<br>除</div>
-			</div>
-			<div class="list_1 clear">
-				<div class="chose fl"><div></div></div>
-				<div class="fl pic"><img src="img/g4.png" alt=""></div>
-				<div class="fl into">
-					<p>精选本地柿子椒500g</p>
-					<p>它可以防止坏血病</p>	
-				</div>
-				<p class="cost"><em>￥</em><span>15.80</span</p>
-				<div class="money clear">
-					<div class="fl rem">-</div>
-					<div class="fl inn">1</div>
-					<div class="fl add">+</div>
-				</div>
-				<div class="lost">删<br>除</div>
-			</div>
+			
 		</div>
 		<div class="footer clear">
 			<div class="choses fl"><div></div></div>
@@ -87,11 +28,20 @@
 	</div>
 </body>
 <script type="text/javascript" src="js/jquery-3.0.0.min.js"></script>
+<script type="text/javascript" src="js/shuju.js"></script>
 <script type="text/javascript">
-	var cont = document.querySelector('.content');
+var cont = document.querySelector('.content');
+
+		for (var i = 0; i < arr.length; i++) {
+			var div= document.createElement('div');
+			div.innerHTML = '<div class="chose fl"><div></div></div><div class="fl pic"><img src="'+arr[i].src+'" alt=""></div><div class="fl into"><p>'+arr[i].name+'</p><p>'+arr[i].use+'</p></div><p class="cost"><em>￥</em><span>'+arr[i].pay+'</span</p><div class="money clear"><div class="fl rem">-</div><div class="fl inn">1</div><div class="fl add">+</div></div><div class="lost">删<br>除</div>';
+			div.className = "list_1 clear";
+			cont.appendChild(div);
+		}
+
 	var list_1 = document.querySelector('.list_1');
 	var bj = document.querySelector('.bj');//编辑键
-	var chose = document.querySelectorAll('.chose div');//选择框
+	var chose = document.querySelectorAll('.chose');//选择框
 	var rem = document.querySelectorAll('.rem');//商品个数减
 	var inn = document.querySelectorAll('.inn');//商品个数
 	var add = document.querySelectorAll('.add');//商品个数加
@@ -110,7 +60,7 @@
 		chose[i].index=i;
 		chose[i].addEventListener('touchstart',function(){
 			if (!this.bol) {
-				this.style.background = "rgba(106,180,57,1)";
+				this.children[0].style.background = "rgba(106,180,57,1)";
 				index++;
 				n = inn[this.index].innerHTML*Number(cost[this.index].innerHTML)
 				this.bol=true;
@@ -118,7 +68,7 @@
 				$_money();
 			}else {
 				index--;
-				this.style.background = "rgba(106,180,57,0)";
+				this.children[0].style.background = "rgba(106,180,57,0)";
 				this.bol=false;
 				n = inn[this.index].innerHTML*Number(cost[this.index].innerHTML)
 				sum -=n;
@@ -134,7 +84,7 @@
 		if (!this.bol) {
 			for (var i = 0; i < chose.length; i++) {
 				this.style.background = "rgba(106,180,57,1)";
-				chose[i].style.background = "rgba(106,180,57,1)";
+				chose[i].children[0].style.background = "rgba(106,180,57,1)";
 				this.bol=true;
 				chose[i].bol=true;
 				j += inn[i].innerHTML*Number(cost[i].innerHTML)
@@ -147,7 +97,7 @@
 		}else {
 			for (var i = 0; i < chose.length; i++) {
 				this.style.background = "rgba(106,180,57,0)";
-				chose[i].style.background = "rgba(106,180,57,0)";
+				chose[i].children[0].style.background = "rgba(106,180,57,0)";
 				this.bol=false;
 				chose[i].bol=false;
 			}
@@ -200,7 +150,7 @@
 		if (!this.bol) {
 			this.innerHTML = "完成";
 			$('.lost').each(function (i) {
-				$('.lost').eq(i).slideDown();
+				$('.lost').eq(i).animate({right:"0%"},1000);
 			})
 			$('.money').each(function (i) {
 				$('.money').eq(i).animate({right:"20%"},1000)
@@ -209,7 +159,7 @@
 		}else {
 			this.innerHTML = "编辑";
 			$('.lost').each(function (i) {
-				$('.lost').eq(i).slideUp();
+				$('.lost').eq(i).animate({right:"-13%"},1000);
 			})
 			$('.money').each(function (i) {
 				$('.money').eq(i).animate({right:"3%"},1000)
@@ -217,14 +167,14 @@
 			this.bol = false;
 		}
 	})
-	var arr = [];
+	var arr2 = [];
 	lostFn()
 	function lostFn() {
 		for (var i = 0; i < lost.length; i++) {
 			lost[i].index = i;
 			lost[i].addEventListener('touchstart',function(){
-				arr.push(this.parentNode);
-				cont.removeChild(arr[0]);
+				arr2.push(this.parentNode);
+				cont.removeChild(arr2[0]);
 				if (chose[this.index].bol) {
 					index--;
 					sum -= inn[this.index].innerHTML*Number(cost[this.index].innerHTML);
@@ -232,14 +182,9 @@
 					js.innerHTML = "去结算("+index+")";
 				}
 				$_money();
-				arr = [];
+				arr2 = [];
 			})
 		}
 	}
-	$.ajax({
-		type:'get',
-		url:'',
-	})
-	
 </script>
 </html>

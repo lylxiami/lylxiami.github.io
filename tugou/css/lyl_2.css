@@ -69,6 +69,7 @@ body,html{
 	margin: 10px auto 0;
 	background: white;
 	position: relative;
+	overflow: hidden;
 }
 .content .list_1 .chose{
 	width: 15px;
@@ -129,17 +130,16 @@ body,html{
 	width: 18px;
 }
 .content .list_1 .lost{
-	width: 50px;
+	width: 13%;
 	height: 100%;
 	position: absolute;
 	top: 0%;
-	right:0%;
+	right:-13%;
 	font-size: 15px;
 	color: white;
 	text-align: center;
 	line-height: 60px;
 	background: rgb(255,94,57);
-	display: none;
 }
 .footer{
 	width: 100%;
@@ -169,8 +169,8 @@ body,html{
 	margin-right: 26px;
 }
 .footer .hj div:first-child{
-	padding-top: 10px;
-	margin-bottom: 7px;
+	padding-top: 8px;
+	margin-bottom: 5px;
 	color: white;
 	font-size: 14px;
 }

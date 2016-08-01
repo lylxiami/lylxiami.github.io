@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<link rel="stylesheet" type="text/css" href="css/reset.css">
+<link rel="stylesheet" href="css/style.css">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<div class="loading">
+		<img src="img/tittle.png" alt="">
+		<img src="img/1.jpg" alt="">
+	</div>
+	<div class="begin">
+		<div class="intro">
+			<p></p>
+			<p></p>
+			<p></p>
+			<p></p>
+			<p></p>
+			<p></p>
+			<p></p>
+			<p></p>
+			<p></p>
+			<p></p>
+			<p></p>
+			<p></p>
+		</div>
+	</div>
+</body>
+<script type="text/javascript" src="js/jquery-3.0.0.min.js"></script>
+<!-- <script type="text/javascript" src="js/find.js"></script> -->
+<script type="text/javascript">
+ var intro =  document.querySelector('.intro');
+ var $p = $('.intro p'); 
+	var aImg =["img/2.png"];
+	var str = "公元9025年 外星人为了争夺 封印在vivo手机中的神秘能量 发起宇宙战乱 超人徐峥为了保卫神秘能量 带着手机来到浩瀚宇宙中 分身成为8个自己 分别保卫八个手机碎片 消失在太阳系的八个行星中 据说找齐徐峥的八个分身 就能启动神秘能量保护地球 ...";
+	arr = str.split(' ');
+	for (var i = 0; i < arr.length; i++) {
+		for (var j = 0; j < arr[i].length; j++) {
+			var str2 = arr[i].substring(j,j+1);
+			$p.eq(i).append('<span>'+str2+'</span>');
+		}
+	}
+	var n =0;
+	var $span = $('.intro span');
+	function go(){
+		$span.eq(n).animate({opacity:"1"},200,function(){
+			go()
+			})	
+		n++;
+		if (n>$span.length) {
+			$('.begin').fadeOut();
+			return;
+		}	
+	}
+
+loadings(function(){
+	$('.loading').fadeOut();
+	$('.begin').animate({opacity:"1"},1000,function(){
+		$('.begin').fadeIn();
+		go();
+	});	
+})
+function loadings(cb){
+	if (aImg.length>0) {
+		var index = 0;
+		for (var i = 0; i < aImg.length; i++) {
+			var img = new Image();
+			img.src = aImg[i];
+			img.onload = function(){
+				index++;
+				if (index==aImg.length) {
+						cb&cb();
+				}
+			}
+		}
+	}else{
+		cb&cb();
+	}
+}
+
+</script>
+</html>

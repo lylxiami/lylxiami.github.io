@@ -27,6 +27,9 @@
 			<p></p>
 		</div>
 	</div>
+	<div class="move">
+		<div class="xuzhen"><img src="img/6.png" alt=""></div>
+	</div>
 </body>
 <script type="text/javascript" src="js/jquery-3.0.0.min.js"></script>
 <!-- <script type="text/javascript" src="js/find.js"></script> -->
@@ -54,14 +57,38 @@
 			return;
 		}	
 	}
+	var $xuzhen = $('.xuzhen')
+	var pic = document.querySelector('.xuzhen img')
+	console.log(pic.src)
+	var bol = false;
+	xuzhenFn()
+	function xuzhenFn(){
+		$xuzhen.animate({right:"8.75%",top:"28%"},2000,function(){
+			var delay = 10; 
+			var timer = setInterval(function () {
+				delay--
+				if (!bol) {
+					pic.src = "img/4.png";
+					bol = true;
+				}else {
+					pic.src = "img/6.png";
+					bol = false;
+				}
+				if (delay<0&&!bol) {
+					clearInterval(timer);
+					$xuzhen.animate({right:"140%",top:"15%"},2000)
+				}
+			},500)
+		})		
+	}
 
-loadings(function(){
-	$('.loading').fadeOut();
-	$('.begin').animate({opacity:"1"},1000,function(){
-		$('.begin').fadeIn();
-		go();
-	});	
-})
+// loadings(function(){
+// 	$('.loading').fadeOut();
+// 	$('.begin').animate({opacity:"1"},1000,function(){
+// 		$('.begin').fadeIn();
+// 		go();
+// 	});	
+// })
 function loadings(cb){
 	if (aImg.length>0) {
 		var index = 0;

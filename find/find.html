@@ -48,7 +48,7 @@
 	var n =0;
 	var $span = $('.intro span');
 	function go(){
-		$span.eq(n).animate({opacity:"1"},200,function(){
+		$span.eq(n).animate({opacity:"1"},150,function(){
 			go()
 			})	
 		n++;
@@ -82,13 +82,13 @@
 		})		
 	}
 
-// loadings(function(){
-// 	$('.loading').fadeOut();
-// 	$('.begin').animate({opacity:"1"},1000,function(){
-// 		$('.begin').fadeIn();
-// 		go();
-// 	});	
-// })
+loadings(function(){
+	$('.loading').fadeOut();
+	$('.begin').animate({opacity:"1"},1000,function(){
+		$('.begin').fadeIn();
+		go();
+	});	
+})
 function loadings(cb){
 	if (aImg.length>0) {
 		var index = 0;

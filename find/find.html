@@ -4,39 +4,121 @@
 <link rel="stylesheet" href="css/style.css">
 <head>
 	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0, maximum-scale=1.0,user-scalable=0">
 	<title>Document</title>
+
 </head>
 <body>
 	<div class="loading">
-		<img src="img/tittle.png" alt="">
-		<img src="img/1.jpg" alt="">
-	</div>
-	<div class="begin">
-		<div class="intro">
-			<p></p>
-			<p></p>
-			<p></p>
-			<p></p>
-			<p></p>
-			<p></p>
-			<p></p>
-			<p></p>
-			<p></p>
-			<p></p>
-			<p></p>
-			<p></p>
+		<img src="img/loading_xuzheng.png" alt="">
+		<div class="font">
+			<span>徐</span>
+			<span>峥</span>
+			<span>新</span>
+			<span>作</span>
+			<span>人</span>
+			<span>在</span>
+			<span>囧</span>
+			<span>途</span>
+			<span>之</span>
+			<span>《</span>
+			<span>太</span>
+			<span>阳</span>
+			<span>系</span>
+			<span>囧</span>
+			<span>》</span>
+			<span>即</span>
+			<span>将</span>b 
+			<span>开</span>
+			<span>演</span>
 		</div>
 	</div>
-	<div class="move">
-		<div class="xuzhen"><img src="img/6.png" alt=""></div>
+	<div class="box">
+		<div class="star1 st_1"><img src="img/star1.png" alt=""></div>
+		<div class="star2 st_1"><img src="img/star2.png" alt=""></div>
+		<div class="star3 st_1"><img src="img/27.png" alt=""></div>
+		<div class="star4 st_1"><img src="img/31.png" alt=""></div>
+		<div class="star5 st_2"><img src="img/27.png" alt=""></div>
+		<div class="star6 st_2"><img src="img/28.png" alt=""></div>
+		<div class="star7 st_2"><img src="img/29.png" alt=""></div>
+		<div class="star8 st_2"><img src="img/30.png" alt=""></div>
+		<div class="star9 st_2"><img src="img/31.png" alt=""></div>
+		<div class="star10 st_2"><img src="img/32.png" alt=""></div>
+		<div class="star11 st_2"><img src="img/33.png" alt=""></div>
+		<div class="star12 st_2"><img src="img/34.png" alt=""></div>
+		<div class="begin">
+			<div class="intro">
+				<p></p>
+				<p></p>
+				<p></p>
+				<p></p>
+				<p></p>
+				<p></p>
+				<p></p>
+				<p></p>
+				<p></p>
+				<p></p>
+				<p></p>
+				<p></p>
+			</div>
+		</div>
+		<div class="move">
+			<div class="xuzhen"></div>
+			<div class="vivo"><img src="img/7.png" alt=""></div>
+			<div class="sui">
+				<div><img src="img/11_1.png" alt=""></div>
+				<div><img src="img/12_1.png" alt=""></div>
+				<div><img src="img/13_1.png" alt=""></div>
+				<div><img src="img/14_1.png" alt=""></div>
+				<div><img src="img/15_1.png" alt=""></div>
+				<div><img src="img/16_1.png" alt=""></div>
+				<div><img src="img/17_1.png" alt=""></div>
+				<div><img src="img/18_1.png" alt=""></div>
+			</div>
+			<div class="qiu">
+				<div><img src="img/19.png" alt=""></div>
+				<div><img src="img/20.png" alt=""></div>
+				<div><img src="img/21.png" alt=""></div>
+				<div><img src="img/22.png" alt=""></div>
+				<div><img src="img/23.png" alt=""></div>
+				<div><img src="img/24.png" alt=""></div>
+				<div><img src="img/25.png" alt=""></div>
+				<div><img src="img/26.png" alt=""></div>
+			</div>
+			<div class="earth">
+				<div class="power">找齐徐峥 启动能量</div>
+				<div class="btn"><img src="img/35.png" alt=""></div>
+			</div>
+		</div>
 	</div>
+	<div class="game">
+		<div class="step"><img src="img/step1.png" alt=""></div>
+		<div class="kuang"><img src="img/kuang.png" alt=""></div>
+		<div class="time">60.00</div>
+		<div class="find"><img src="img/head.png" alt=""><img src="img/head.png" alt=""><img src="img/head.png" alt=""><img src="img/head.png" alt="">
+		</div>
+	</div>
+	<div class="tan"><img src="img/44.png" alt=""></div>
 </body>
 <script type="text/javascript" src="js/jquery-3.0.0.min.js"></script>
-<!-- <script type="text/javascript" src="js/find.js"></script> -->
 <script type="text/javascript">
- var intro =  document.querySelector('.intro');
- var $p = $('.intro p'); 
-	var aImg =["img/2.png"];
+	 var intro =  document.querySelector('.intro');
+	 var $xuzhen = $('.xuzhen');
+	 var vivo = document.querySelector('.vivo');
+	 var pic = document.querySelectorAll('.sui img');
+	  var qiu = document.querySelector('.qiu');
+	 var earth = document.querySelector('.earth');
+	 var $p = $('.intro p'); 
+	 var aImg =["img/2.png","img/4.png","img/5.png","img/6.png","img/7.png","img/9.png","img/10.png","img/19.png","img/20.png","img/21.png","img/22.png","img/23.png","img/24.png","img/25.png","img/26.png","img/27.png","img/28.png","img/29.png","img/30.png","img/31.png","img/32.png","img/33.png","img/34.png","img/35.png"];
+	loadings(function(){
+		setTimeout(function(){
+			$('.loading').fadeOut(2000,function(){
+				$('.box').fadeIn(function(){
+					go();
+				});	
+			})
+		},5000);	
+	})
 	var str = "公元9025年 外星人为了争夺 封印在vivo手机中的神秘能量 发起宇宙战乱 超人徐峥为了保卫神秘能量 带着手机来到浩瀚宇宙中 分身成为8个自己 分别保卫八个手机碎片 消失在太阳系的八个行星中 据说找齐徐峥的八个分身 就能启动神秘能量保护地球 ...";
 	arr = str.split(' ');
 	for (var i = 0; i < arr.length; i++) {
@@ -48,47 +130,54 @@
 	var n =0;
 	var $span = $('.intro span');
 	function go(){
-		$span.eq(n).animate({opacity:"1"},150,function(){
+		$span.eq(n).animate({opacity:"1"},50,function(){//介绍文字的出现
 			go()
 			})	
 		n++;
 		if (n>$span.length) {
-			$('.begin').fadeOut();
+			$('.begin').fadeOut(2000,function(){
+			$('.move').fadeIn();
+			xuzhenFn()
+			});
 			return;
 		}	
 	}
-	var $xuzhen = $('.xuzhen')
-	var pic = document.querySelector('.xuzhen img')
-	console.log(pic.src)
-	var bol = false;
-	xuzhenFn()
 	function xuzhenFn(){
-		$xuzhen.animate({right:"8.75%",top:"28%"},2000,function(){
-			var delay = 10; 
-			var timer = setInterval(function () {
-				delay--
-				if (!bol) {
-					pic.src = "img/4.png";
-					bol = true;
-				}else {
-					pic.src = "img/6.png";
-					bol = false;
-				}
-				if (delay<0&&!bol) {
-					clearInterval(timer);
-					$xuzhen.animate({right:"140%",top:"15%"},2000)
-				}
-			},500)
+		//徐峥出现的动画
+		$xuzhen.animate({right:"8.75%",top:"35%"},2000,function(){
+			setTimeout(function(){
+				$xuzhen.animate({right:"140%",top:"0%"},2000,function(){
+						$('.st_1').each(function(i){
+							$('.st_1').fadeOut(2000)
+						})
+						setTimeout(function(){
+							suiFn()
+						},4000)		
+					})
+			},1600)					
 		})		
 	}
+	function suiFn() {
+		$('.sui').fadeIn(2000,function(){
+			var k=18
+				for (var i = 0; i < pic.length; i++) {
+					k++
+					pic[i].src = "img/"+k+".png"
+				}
+				$('.st_2').each(function(i){
+							$('.st_2').fadeIn()
+						})
+				$('.qiu').fadeIn(2000)
+			$('.vivo').fadeOut(100).animate({opacity:"1"},400,function(){
+				$('.sui').fadeOut(1000)
+				setTimeout(function(){
+				 	qiu.style.display = "none";
+					earth.style.display = "block";
+				},3000)				
+			})
+		});				
+	}
 
-loadings(function(){
-	$('.loading').fadeOut();
-	$('.begin').animate({opacity:"1"},1000,function(){
-		$('.begin').fadeIn();
-		go();
-	});	
-})
 function loadings(cb){
 	if (aImg.length>0) {
 		var index = 0;
@@ -106,6 +195,82 @@ function loadings(cb){
 		cb&cb();
 	}
 }
+var timer = null;
+var l=2;
+var m=0.02;
+var a = 44;
+var x= 1;//第几关
+var rnd = Math.floor(Math.random()*4);
+$('.btn').on('click',function(){
+	$('.box').hide();
+	$('.game').show();
+	timeFn();
+	$('.find img').eq(rnd).attr({src:"img/head0.png"})
+	find()
+	function find(){
+		$('.find img').on('click',function(){
+		if ($(this).attr("src")=="img/head0.png") {
+			$(".tan img").attr({src:"img/"+a+".png"});
+			a++//弹框图片下标
+			$(".tan").show();
+			m=0;//时间停止
+			x++
+			$('.step img').attr({src:"img/step"+x+".png"})
+			if (x==7||x==8) {$('.step').css({width:"45.9375%"})}
+			l +=1
+			if (x==5) {l=5}
+			if (x==7) {l=6}
+			createFn(l)
+			s=l*l
+			if(x==5){
+				rndFn()
+			}else if (x==7) {
+				rndFn()
+			}else {
+				var rnd = Math.floor(Math.random()*s);
+				$('.find img').eq(rnd).attr({src:"img/head0.png"})
+			}
+			find()
+		}
+	})
+	}
 
+})
+
+function rndFn(){
+	var arr=[];
+	for (var i = 0; i < l*l; i++) {
+		arr.push(i);
+	}
+	arr.sort(function(a,b){
+		return Math.random()-0.5;
+	})
+	$('.find img').eq(arr[0]).attr({src:"img/head0.png"})
+	for (var i = 0; i < l-1; i++) {
+		$('.find img').eq(arr[i+1]).attr({src:"img/52.png"})
+	}
+}
+ $('.tan').on('click',function(){
+ 	$(".tan").hide();
+ 	m=0.02;
+ })
+function timeFn(){
+	var t = 60.00;
+	timer = setInterval(function(){
+		t -=m
+		if (t<=0) {
+			clearInterval(timer)
+			t=0
+		}
+		$('.time').html(t.toFixed(2));
+	},20)
+}
+
+function createFn(l){
+	$('.find').html('');
+	for (var i = 0; i < l*l; i++) {
+		$('.find').append('<img style="width:'+100/l+'%" src="img/he		ad.png" alt="">')
+	}
+}
 </script>
 </html>

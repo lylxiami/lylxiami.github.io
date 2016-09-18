@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+	<link rel="stylesheet" type="text/css" href="css/reset.css">
+	<link rel="stylesheet" href="css/style_2.css">
+	<title>Document</title>
+</head>
+<body>
+	<div class="loading">
+		<img src="img/loading_xuzheng.png" alt="">
+		<div class="font">
+			<span>徐</span>
+			<span>峥</span>
+			<span>新</span>
+			<span>作</span>
+			<span>人</span>
+			<span>在</span>
+			<span>囧</span>
+			<span>途</span>
+			<span>之</span>
+			<span>《</span>
+			<span>太</span>
+			<span>阳</span>
+			<span>系</span>
+			<span>囧</span>
+			<span>》</span>
+			<span>即</span>
+			<span>将</span> 
+			<span>开</span>
+			<span>演</span>
+		</div>
+	</div>
+	<div class="box">
+		<div class="star1 st_1"><img src="img/star1.png" alt=""></div>
+		<div class="star2 st_1"><img src="img/star2.png" alt=""></div>
+		<div class="star3 st_1"><img src="img/27.png" alt=""></div>
+		<div class="star4 st_1"><img src="img/31.png" alt=""></div>
+		<div class="star5 st_2"><img src="img/27.png" alt=""></div>
+		<div class="star6 st_2"><img src="img/28.png" alt=""></div>
+		<div class="star7 st_2"><img src="img/29.png" alt=""></div>
+		<div class="star8 st_2"><img src="img/30.png" alt=""></div>
+		<div class="star9 st_2"><img src="img/31.png" alt=""></div>
+		<div class="star10 st_2"><img src="img/32.png" alt=""></div>
+		<div class="star11 st_2"><img src="img/33.png" alt=""></div>
+		<div class="star12 st_2"><img src="img/34.png" alt=""></div>
+		<div class="con">
+			公元9025年<br>                                                
+			外星人为了争夺<br>
+			封印在vivo手机中的神秘能量<br>
+			发起宇宙战乱<br>
+			超人徐峥为了保卫神秘能量<br>
+			带着手机来到浩瀚宇宙中<br>
+			分身成为8个自己<br>
+			分别保卫8块手机碎片<br>
+			消失在太阳系的八大行星中<br>
+			据说找齐徐峥的8个分身<br>
+			就能启动神秘能量保护地球<br>
+			...
+		</div>
+		<div class="move">
+			<div class="xuzhen"></div>
+			<div class="vivo"><img src="img/7.png" alt=""></div>
+			<div class="sui">
+				<div><img src="img/11_1.png" alt=""></div>
+				<div><img src="img/12_1.png" alt=""></div>
+				<div><img src="img/13_1.png" alt=""></div>
+				<div><img src="img/14_1.png" alt=""></div>
+				<div><img src="img/15_1.png" alt=""></div>
+				<div><img src="img/16_1.png" alt=""></div>
+				<div><img src="img/17_1.png" alt=""></div>
+				<div><img src="img/18_1.png" alt=""></div>
+			</div>
+			<div class="qiu">
+				<div><img src="img/19.png" alt=""></div>
+				<div><img src="img/20.png" alt=""></div>
+				<div><img src="img/21.png" alt=""></div>
+				<div><img src="img/22.png" alt=""></div>
+				<div><img src="img/23.png" alt=""></div>
+				<div><img src="img/24.png" alt=""></div>
+				<div><img src="img/25.png" alt=""></div>
+				<div><img src="img/26.png" alt=""></div>
+			</div>
+			<div class="earth">
+				<div class="power">找齐徐峥 启动能量</div>
+				<div class="btn"><img src="img/35.png" alt=""></div>
+			</div>
+		</div>
+	</div>
+</body>
+
+<script type="text/javascript" src="js/jquery-3.0.0.min.js"></script>
+<script type="text/javascript">
+	var _width = parseInt(window.screen.width);
+	console.log(_width)
+		var scale = _width/320;
+		console.log(scale)
+		var ua = navigator.userAgent.toLowerCase();
+		var result = /android (\d+\.\d+)/.exec(ua);
+		if (result){
+		var version = parseFloat(result[1]);
+		if(version>2.3){
+		document.write('<meta name="viewport" content="width=640, minimum-scale = '+scale+', maximum-scale = '+scale+', target-densitydpi=device-dpi">');
+		}else{
+		document.write('<meta name="viewport" content="width=640, target-densitydpi=device-dpi">');
+		}
+		} else {
+		document.write('<meta name="viewport" content="width=640, user-scalable=no, target-densitydpi=device-dpi">');
+		}
+
+setTimeout(function(){
+	$('.loading').fadeOut(function(){
+		fontshow(function($con){
+			$con.fadeOut(function(){
+				$('.move').show();
+			})
+		})
+	})
+},5000)
+
+function fontshow(cb) {
+	$con = $('.con');
+	var con = $con.html().trim();
+	$con.html('')
+	$con.show();
+	var arr = con.split('<br>');
+	// alert(arr)
+	line('',0)
+	function line(con,n){
+		if (n==arr.length) {return cb($con)}
+		var text = arr[n];
+		var len = text.length;
+		var i = 0;
+		show()
+		function show(){
+			setTimeout(function(){
+				i++;	
+				var txt = con+text.substring(0,i);
+				console.log(txt)
+				$con.html(txt);
+				if (i>len) {					
+					return line(txt+"<br>",++n);
+				}else{
+					show()
+				}
+			},50)
+
+		}
+
+	}
+
+}
+</script>
+</html>

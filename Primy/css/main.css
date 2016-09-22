@@ -1,0 +1,442 @@
+body, div, ul, li, img, p, a, h1, h2, h3,input {
+    margin: 0px;
+    padding: 0px;
+    border: 0px;
+}
+a{text-decoration: none;}
+li{list-style: none;}
+html, body {
+    font-family:"微软雅黑";
+	height:100%;
+	overflow: hidden;
+	position: relative;
+}
+.bgAni{
+/*	display: none;*/
+	height: 100%;
+	position: relative;
+	background: url(../img/bg.jpg) center no-repeat;
+}
+.bgAni img{
+	position: absolute;
+}
+.sui{
+	top:0;
+	left:0;
+}
+.sui4{
+	top:0;
+	right:0;
+}
+.wrap{
+	position: absolute;
+	top:0;
+	left:0;
+	width: 100%;
+	height: 100%;
+	z-index: 2;
+	overflow: hidden;
+}
+.wrap>div{
+	position: absolute;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	/*display: none;*/
+}
+.innerDiv{
+	position: absolute;
+	height: 780px;
+	width: 100%;
+	top:50%;
+	margin-top: -380px;
+}
+.innerDiv img{
+	position: absolute;
+}
+.wrap>div.w1{
+	opacity: 1;
+	z-index: 6;
+	display: block;
+}
+.w2{
+	z-index: 4;
+}
+.w3{
+	z-index: 3;
+}
+.w4{
+	z-index: 2;
+}
+/*21*/
+.book{
+	bottom: 0;
+	left:50%;
+	margin-left: -249.5px;
+}
+.zp{
+	width: 481px;
+	top: 110px;
+	left:50%;
+	margin-left: -240.5px;
+    -webkit-animation: rotate 15s linear 0.3s infinite both;
+    animation: rotate 15s linear 0.3s infinite both;
+}
+.w1 .g{
+	left: 50%;
+    margin-left: -269px;
+    top: 470px;
+    -webkit-animation: g 1s ease-in infinite alternate;
+    animation: g 1s ease-in infinite alternate;
+}
+.shou{
+	width: 65px;
+    top:676px;
+    left:50%;
+    margin-left: 25.5px;
+    opacity: 0;
+    -webkit-animation: tip 1s ease-out 1.3s infinite both;
+    animation: tip 1s ease-out 1.3s infinite both;
+}
+
+.jn{
+	width:100%;
+	/*left:50%;
+	margin-left: -230px;
+	top: 118px;*/
+}
+.shou1{
+	width: 65px;
+	top: 216px;
+    left: 50%;
+    margin-left: 15.5px;
+    opacity: 0;
+    -webkit-animation: tip2 3s ease-out 0.5s 2 ;
+    animation: tip2 3s ease-out 0.5s 2 ;
+}
+.ani2{
+	position: absolute;
+	display: none;
+	width: 472px;
+	height: 460px;
+    left: 50%;
+    margin-left: -230px;
+    top: 118px;
+}
+.ani2 p{
+	text-align: center;color:#fff;
+	position: absolute;
+    bottom: -64px;
+    width: 100%;
+    font-size: 18px;
+}
+canvas{
+	position: absolute;
+	z-index: 2;
+	left:0px;
+}
+.txt{
+	left:50%;
+	margin-left: -208px;
+	top: 283px;
+}
+/*.w1{display: none;}*/
+.w2{display: none;}
+.w3{display: none;}
+/*w2*/
+.w2>img{
+	position: absolute;
+	top: 0;
+}
+.gd{
+	width: 626px;
+	-webkit-transform: translateX(-150px);
+}
+.gdAni{
+	-webkit-animation: moveInLeft 0.7s ease 0.2s both;
+	animation: moveInLeft 0.7s ease 0.2s both;
+}
+.round{
+	width: 640px;
+}
+.photo{
+	position: absolute;
+	width: 369px;
+	left: 115px;
+	top: 240.5px;
+}
+.moveIn{
+	-webkit-animation:guandao 4s 1s ease both;
+	animation:guandao 4s ease 1s both;
+}
+.photo img{
+	margin-bottom: 80px;
+}
+.w2>img:nth-child(2){
+	right: 0;
+	top: 50px;
+	-webkit-animation: rotate 3s linear infinite;
+	animation: rotate 3s linear infinite;
+}
+.w2>img:nth-child(3){
+    width: 145px;
+    right: 17px;
+    top: 150px;
+	-webkit-animation: rotate 2.5s linear infinite;
+	animation: rotate 2.5s linear infinite;
+}
+.w2>img:nth-child(4){
+	width: 145px;
+    right: 20px;
+    top: 392px;
+	-webkit-animation: rotate 2s linear infinite;
+	animation: rotate 2s linear infinite;
+}
+.w2>img:nth-child(5){
+    width: 105px;
+    right: -71px;
+    top: 355px;
+	-webkit-animation: rotatef 2s linear infinite;
+	animation: rotatef 2s linear infinite;
+}
+.w2>img:nth-child(6){
+	right: -10px;
+    top: 689px;
+	-webkit-animation: rotatef 2s linear infinite;
+	animation: rotatef 2s linear infinite;
+}
+.w2>img:nth-child(7){
+    width: 163px;
+    right: 13px;
+    top: 627px;
+	-webkit-animation: rotate 2s linear infinite;
+	animation: rotate 2s linear infinite;
+}
+
+.enterNext{
+	position: absolute;
+	width: 369px;
+	height: 481px;
+	left:115px;
+	top:50%;
+	margin-top: -240.5px;
+	display: none;
+}
+/*w3*/
+.w3{
+	background: url(../img/bg.jpg) bottom no-repeat;
+}
+.w3 .innerDiv{
+	margin:0;
+	top:auto;
+	bottom: 168px;
+}
+.w3 img{position: absolute;}
+.txt1{
+	left: 50%;
+    margin-left: -121.5px;
+    top: 47px;
+}
+.clock353{
+	position: absolute;
+	width: 353px;
+	height: 487px;
+	bottom: 0;
+	left:50%;
+	margin-left: -171.5px;
+	-webkit-transform: translateY(-150px);
+	transform: translateY(-150px);
+	-webkit-animation: downIn 0.3s ease-in both;
+	animation: downIn 0.3s ease-in both;
+}
+.clock353 .clock{
+	width: 100%;
+}
+.zz{
+	left:50%;
+	margin-left: -71px;
+	top: 190px;
+}
+.zzRotate{
+	-webkit-animation: zzRotate 3s ease-in-out both;
+	animation: zzRotate 3s ease-in-out both;
+}
+.btn{
+	position: absolute;
+	bottom:32px;
+	left:50%;
+	margin-left: -115.5px;
+}
+/*w4*/
+.w4{
+	display: none;
+	height: 100%;
+	background-color: #0d0e19;
+}
+.w4 p{
+	color:#fff;
+	font-size: 23px;
+	text-align: center;
+	position: relative;
+	top: 374px;
+}
+/*w5*/
+.w5{
+	display: none;
+	background: url(../img/group1/bg3.jpg) center no-repeat;
+}
+.w5 .innerDiv{
+	height: 461px;
+	margin-top: -224px;
+}
+.numshow{
+	width: 463px;
+	height: 123px;
+	margin: 0px auto 18px;
+}
+.w5 p{
+	text-align: center;
+	font-size: 22px;
+	color:#a7a7a9;
+	margin-bottom: 85px;
+}
+.num{
+	width: 400px;
+	margin:0 auto;
+	overflow: hidden;
+    position: relative;
+    /*top: 489px;*/
+}
+.num div{
+	width: 123px;
+	height: 101px;
+	float: left;
+	margin: 0 5px;
+	background: url(../img/group1/num.png) no-repeat;
+}
+.num div:nth-child(2){
+	background-position: -123px 0px;
+}
+.num div:nth-child(3){
+	background-position: -246px 0px;
+}
+.num div:nth-child(4){
+	background-position: 0px -101px;
+}
+.num div:nth-child(5){
+	background-position: -123px -101px;
+}
+.num div:nth-child(6){
+	background-position: -246px -101px;
+}
+.num div:nth-child(7){
+	background-position: 0px -202px;
+}
+.num div:nth-child(8){
+	background-position: -123px -202px;
+}
+.num div:nth-child(9){
+	background-position: -246px -202px;
+}
+.num div:nth-child(10){
+	width: 369px;
+	margin: 0px 15px;
+	background-position: 0px -303px;
+}
+.passBg{
+    float: left;
+    width: 64px;
+    height: 92px;
+    background: url(../img/group1/passsBg.png) center no-repeat;
+    position: relative;
+    overflow: hidden;
+    margin: 15px 6.5px;
+}
+.passBg>div{
+	position: relative;
+	-webkit-transition: all 0.3s;
+	transition: all 0.3s;
+}
+.passBg>div div{
+	width: 64px;
+	height: 92px;
+	text-align: center;
+	font-size: 30px;
+	line-height: 92px;
+}
+/**/
+
+.w5-loading{
+	display: none;
+	height: 100%;
+	background-color: #0d0e19;
+}
+
+.w5-loading p{
+	color:#fff;
+	font-size: 23px;
+	text-align: center;
+	position: relative;
+	top: 374px;
+}
+/**/
+.w6{
+	display: none;
+	height: 100%;
+	background-color: #0d0e19;
+}
+.w6 iframe{
+	background-color: #0d0e19;
+	border: none;
+	overflow: hidden;
+}
+/**/
+.loading{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top:0;
+	background-color: #11121d;
+	z-index: 99;
+}
+.load{
+	position: absolute;
+	width: 272px;
+	height: 272px;
+	background: url(../img/group1/load.png) no-repeat;
+	background-size: 100%;
+	left:50%;
+	top:50%;
+	margin-left: -136px;
+	margin-top: -240px;
+	text-align: center;
+	line-height: 272px;
+	color:#fff;
+	font-size: 30px;
+	/*-webkit-animation:rotate 2s linear infinite;*/
+}
+.w6 .innerDiv img{
+	position: absolute;
+}
+.g1 .innerDiv img{
+	position: static;
+}
+.g2 .innerDiv img{
+	position: static;
+}
+.g3 .innerDiv img{
+	position: static;
+}
+.g4 .innerDiv img{
+	position: static;
+}
+.g4 .innerDiv img.g{
+	position: absolute;
+}
+.g3 .innerDiv img.logo{
+	position: absolute;
+}
+.passBg>div img{
+    vertical-align: middle;
+    position: static;
+}
